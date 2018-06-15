@@ -1,0 +1,381 @@
+/********************
+      HEADER
+********************/
+
+.header {
+	display: flex;
+	height: 100px;
+	background-color: black;
+	justify-content: space-between;
+}
+
+header img {
+	width: 100px;
+	height: 100px;
+}
+
+.menu ul{
+	display: flex;
+	list-style: none;
+	align-items: center;
+	margin: auto;
+}
+
+.menu ul li a {
+	color: white;
+	text-decoration: none;
+	margin: 15px;
+}
+
+.menu ul li a:hover{
+	color: red;
+}
+
+/********************
+	MENU BURGER
+********************/
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+	line-height: 1;
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+}
+
+#cssmenu {
+	width: 100%;
+	margin: auto;
+}
+
+#cssmenu > ul > li {
+	float: left;
+}
+
+#cssmenu > ul > li > a {
+	padding: 17px;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	color: red;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+#cssmenu > ul > li:hover > a {
+	color: #ffffff;
+}
+
+@media all and (max-width: 1199px) {
+	#cssmenu {
+		  width: 100%;
+		  text-align: left;
+	}
+
+	#cssmenu ul li a {
+		background-color: yellow;
+		border-bottom: 0;
+	}
+
+	#cssmenu > ul > li {
+	  float: none;
+	}
+
+	#cssmenu #menu-button {
+		display: block;
+		padding: 17px;
+		color: #dddddd;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	#cssmenu #menu-button:after {
+		position: absolute;
+		top: 22px;
+		right: 17px;
+		display: block;
+		height: 4px;
+		width: 20px;
+		border-top: 2px solid #dddddd;
+		border-bottom: 2px solid #dddddd;
+		content: '';
+	}
+
+	#cssmenu #menu-button:before {
+		position: absolute;
+		top: 16px;
+		right: 17px;
+		display: block;
+		height: 2px;
+		width: 20px;
+		background: #dddddd;
+		content: '';
+	}
+
+	#cssmenu #menu-button.menu-opened:after {
+		top: 23px;
+		border: 0;
+		height: 2px;
+		width: 15px;
+		background: #ffffff;
+		transform: rotate(45deg);
+	}
+
+	#cssmenu #menu-button.menu-opened:before {
+		top: 23px;
+		background: #ffffff;
+		width: 15px;
+		transform: rotate(-45deg);
+	}
+}
+  
+
+/********************
+        MAIN
+********************/
+
+main {
+	display: flex;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 0;
+	padding-top: 10px;
+
+}
+
+/********************
+      CATEGORY
+********************/
+
+.category {
+	width: 16%;
+	background-color: black;
+	padding: 25px 0 25px 0;
+}
+
+.category p {
+	color: white;
+	text-align: center;
+	margin: 0 0 25px 0;
+}
+
+.sidebar {
+	padding: 0;
+}
+
+.sidebar li {
+	text-align: center;
+}
+
+.sidebar ul {
+	list-style: none;
+}
+
+.sidebar a {
+	text-decoration: none;
+	color: white;
+}
+
+.sidebar a:hover {
+	color: red;
+}
+
+/********************
+        ROOM
+********************/
+
+.right {
+	width: 84%;
+	background-color: yellow;
+}
+
+.roomRow1, .roomRow2, .roomRow3, .roomRow4 {
+	display: flex;
+	justify-content: center;
+}
+
+.room {
+	padding-bottom: 25px;
+}
+
+
+.detailRoom {
+	width: 20%;	
+	display: block;
+	margin: 10px;
+}
+
+.detailRoom p {
+	margin: 5px;
+}
+
+.detailRoom img {
+	height: 200px;
+	width: 100%;
+}
+
+/********************
+       FOOTER
+********************/
+
+footer {
+	display: flex;
+	background-color: black;
+	color: white;
+	height: 200px;
+}
+
+.footerLeft, .footerRight {
+	width: 33%;
+	text-align: center;
+	margin: auto;
+}
+
+.footerCenter {
+	width: 34%;
+	text-align: center;
+	margin: auto;
+}
+
+.footerCenter ul {
+	list-style: none;
+}
+
+.footerCenter a, .footerRight a {
+	text-decoration: none;
+	color: white;
+}
+
+.footerCenter a:hover, .footerRight a:hover {
+	color: red;
+}
+
+.menuFooter {
+	padding: 0;
+}
+
+/********************
+Responsive tablette
+********************/
+
+@media all and (min-width: 700px) and (max-width: 1199px)
+{
+	main {
+		display: block;
+	}
+
+	.right {
+		width: 100%;
+	}
+
+	.category {
+		width: 100%;
+	}
+
+	.room {
+		width: 100%;
+		column-count: 2;
+	}
+
+	.roomRow1, .roomRow2, .roomRow3, .roomRow4 {
+		display: block;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.detailRoom {
+		width: 80%;	
+		margin: 0 10% 0 10%;
+		padding-top: 25px;
+		text-align: center;
+	}
+
+	.category {
+		text-align: center;
+	}
+
+	footer {
+		flex-direction: column;
+		padding: 25px 0 25px 0;
+		height: 300px;
+		justify-content: center;
+		margin: 0;		
+	}
+
+	.footerLeft p {
+		margin: 2px;
+	}
+
+	.footerLeft, .footerRight, .footerCenter {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+	
+	.menuFooter {
+		padding: 0;
+	}
+}
+
+/********************
+Responsive téléphone
+********************/
+
+@media all and (max-width: 699px)
+{
+	main {
+		display: block;
+	}
+
+	.category {
+		width: 100%;
+	}
+
+	.right {
+		width: 100%;
+	}
+
+	.roomRow1, .roomRow2, .roomRow3, .roomRow4 {
+		display: block;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.detailRoom {
+		width: 80%;	
+		margin: 25px 10% 0 10%;
+		text-align: center;
+	}
+
+	.category {
+		text-align: center;
+	}
+
+	footer {
+		flex-direction: column;
+		padding: 25px 0 25px 0;
+		height: 300px;
+		justify-content: center;
+		margin: 0;		
+	}
+
+	.footerLeft p {
+		margin: 2px;
+	}
+
+	.footerLeft, .footerRight, .footerCenter {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+}
